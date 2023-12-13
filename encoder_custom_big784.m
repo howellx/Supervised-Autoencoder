@@ -6,6 +6,7 @@ l = 20;                     %Length of label vector
 a = 1;                      %Label vector scalar
 epochs = 40;                %Autoencoder epochs
 display_num = 200;          %Test point to display
+step_size = 10;
 
 %% Setting data up
 % load mnist into workspace
@@ -58,7 +59,6 @@ X_test_custom = [X_test; zeros(l, n_test)];
 
 
 %% Creating CCR and MSE vecs for plotting
-%
 CCR_train_lda_vec = [];
 CCR_test_lda_vec = [];
 
@@ -114,8 +114,8 @@ MSE_test_vec_custom_0s = [];
 
 %% Starting the loop
 positionCount = 1;
-%k_array = 1:10:d; 
-k_array = 1:20:200;
+k_array = 1:step_size:d; 
+%k_array = 1:20:200; %for testing 
 for k = k_array
     
     %% Unmodified autoencoder with regular inputs
