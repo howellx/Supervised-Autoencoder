@@ -1,4 +1,5 @@
-Read "Final Report.pdf" for more details about this project.
+**Read "Final Report.pdf" for more details about this project.**
+
 
 This supervised autoencoder repository attempts to train the MATLAB Deep Learning Toolbox autoencoder to reduce feature vectors based on classification as well as reconstruction error, by appending the label vector to the training data. 
 There are two .m files that contain our code: 
